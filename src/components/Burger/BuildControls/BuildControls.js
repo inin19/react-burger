@@ -10,8 +10,6 @@ const controls = [
 ];
 
 const buildControls = (props) => {
-
-  console.log(props);
   return (
     <div className={classes.BuildControls}>
       <p>
