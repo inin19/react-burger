@@ -17,7 +17,10 @@ const rootReducer = combineReducers({
   auth: authReducer,
 });
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers =
+  process.env.REACT_APP_NODE_ENV === 'dev'
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    : null || compose;
 
 const store = createStore(
   rootReducer,
